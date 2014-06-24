@@ -328,3 +328,12 @@ main {
         text-align: center;
     }
 }
+
+.item {
+    margin-bottom: 5px;
+}
+.item img {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}

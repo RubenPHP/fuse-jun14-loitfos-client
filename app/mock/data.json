@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "guid": "51164f89-caa8-4ade-94da-3243fed925fb",
+    "isActive": true,
+    "picture": "http://placehold.it/32x32",
+    "age": 42,
+    "name": "Lelia Wilder",
+    "gender": "female",
+    "total": 623,
+    "replies": 40,
+    "retweets": 248
+  },
+  {
+    "id": 1,
+    "guid": "ab1d1f01-35fe-48bc-9c78-88fcd5ca491a",
+    "isActive": true,
+    "picture": "http://placehold.it/32x32",
+    "age": 42,
+    "name": "Francine Talley",
+    "gender": "female",
+    "total": 453,
+    "replies": 40,
+    "retweets": 235
+  },
+  {
+    "id": 2,
+    "guid": "8be5cb4a-2b61-4cb7-8bba-c713b4e405c2",
+    "isActive": true,
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "name": "Elliott Bryan",
+    "gender": "male",
+    "total": 355,
+    "replies": 40,
+    "retweets": 239
+  },
+  {
+    "id": 3,
+    "guid": "b209f80f-a08a-4a18-a969-e3b687a02730",
+    "isActive": false,
+    "picture": "http://placehold.it/32x32",
+    "age": 46,
+    "name": "Monroe Bryant",
+    "gender": "male",
+    "total": 497,
+    "replies": 40,
+    "retweets": 134
+  },
+  {
+    "id": 4,
+    "guid": "47d8ce1b-9add-4c30-a610-0876296661af",
+    "isActive": true,
+    "picture": "http://placehold.it/32x32",
+    "age": 36,
+    "name": "Lauren Jackson",
+    "gender": "female",
+    "total": 399,
+    "replies": 40,
+    "retweets": 59
+  },
+  {
+    "id": 5,
+    "guid": "97e3b0af-5222-45f2-9342-0a0f31f51be4",
+    "isActive": false,
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "name": "Stacey Hopkins",
+    "gender": "female",
+    "total": 784,
+    "replies": 40,
+    "retweets": 293
+  },
+  {
+    "id": 6,
+    "guid": "de581566-543f-4c08-93c8-21f2b8789c69",
+    "isActive": false,
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "name": "Rena Thomas",
+    "gender": "female",
+    "total": 644,
+    "replies": 40,
+    "retweets": 215
+  }
+]

@@ -1,32 +1,50 @@
 /** @jsx React.DOM */
 (function(){
 	var list = React.createClass({
+		getInitialState: function() {
+		    return {
+		      model: []
+		    };
+		},
+
 		render: function () {
 			return (
 				<div>
 					<h2>{this.props.title}</h2>
-					{this.props.model.map(function(user){
-						return <item image={user.image} name={user.name} total={user.totalTweets}></item>
-					})}
+					<div class="items">
+						{this.state.model && this.state.model.map(function(user){
+							return <item image={user.picture} name={user.name} total={user.total}></item>
+						})}
+					</div>
 				</div>
 			)
+		},
+
+		componentDidMount: function() {
+		    $.get(this.props.source, function(result) {
+		      this.setState({
+		        model: result
+		      });
+		    }.bind(this));
 		}
 	});
 
 	var item = React.createClass({
 		render: function() {
 			return (
-				<div>
+				<div className="item clearfix">
 					<img src={this.props.image}/>
-					{this.props.name}
-					{this.props.total} Tweets
+					<div className="color--blue">
+						{this.props.name}
+						<aside className="color--blue-secondary">{this.props.total} Tweets</aside>
+					</div>
 				</div>
 			)
 		}
 	});
 	
 	React.renderComponent(
-	  <list model={tweets} title="Top Tweet Users"/>,
+	  <list title="Top Tweet Users" source="mock/data.json"/>,
 	  document.getElementById('top-users')
 	);
 

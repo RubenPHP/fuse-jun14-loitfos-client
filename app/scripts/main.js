@@ -43,23 +43,5 @@
         }
     });
 
-    window.tweets = [
-        {
-            image: 'http://lorempixel.com/80/80/',
-            name: 'oren',
-            total: '300'
-        },
-
-        {
-            image: 'http://lorempixel.com/80/80/',
-            name: 'jerry',
-            total: '800'
-        },
-
-        {
-            image: 'http://lorempixel.com/80/80/',
-            name: 'billy',
-            total: '700'
-        },
-    ]
+    
 })();
