@@ -45,19 +45,19 @@
 
     window.tweets = [
         {
-            image: 'some-image',
+            image: 'http://lorempixel.com/80/80/',
             name: 'oren',
             total: '300'
         },
 
         {
-            image: 'some-image',
+            image: 'http://lorempixel.com/80/80/',
             name: 'jerry',
-            total: '500'
+            total: '800'
         },
 
         {
-            image: 'some-image',
+            image: 'http://lorempixel.com/80/80/',
             name: 'billy',
             total: '700'
         },
