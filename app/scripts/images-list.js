@@ -11,11 +11,11 @@
 			return (
 				<div>
 					<h2>{this.props.title}</h2>
-					<div class="items">
+					<ul className="list-guides-intro list-centered list--reset clear">
 						{this.state.model && this.state.model.map(function(user){
-							return <item image={user.picture} name={user.name} total={user.total}></item>
+							return <item image={user.picture} id={user.id}></item>
 						})}
-					</div>
+					</ul>
 				</div>
 			)
 		},
@@ -32,22 +32,18 @@
 	var item = React.createClass({
 		render: function() {
 			return (
-				<div className="item clearfix">
-					<img src={this.props.image}/>
-					<div className="color--blue">
-						{this.props.name}
-						<aside className="color--blue-secondary">{this.props.total} Tweets</aside>
-					</div>
-				</div>
+				<li className="g-medium--half g-wide--1 theme--multi-device-layouts">
+					<a href="#" className="themed">
+						<img src={this.props.image} />
+			        </a>
+					<p>{this.props.image}</p>
+				</li>
 			)
 		}
 	});
 
 	[
-		{ id: 'top-users', label: 'Top Tweet Users'}, 
-		{ id: 'gender', label: 'Gender'}, 
-		{ id: 'top-ages', label: 'Ages'},
-		{ id: 'tweets', label: 'Tweets'}
+		{ id: 'latest-pics', label: 'Latest Pics' }
 	].forEach(function(section){
 		var ajaxPath = 'mock/' + section.id + '.json';
 		React.renderComponent(

@@ -207,13 +207,26 @@ button.menu img {
 
 main {
     margin: 0 auto;
+    margin-top: 60px;
     /* Height of the header */
     padding: 60px 16px 16px 16px;
     min-height: 100%;
 }
 
+.item {
+    margin-bottom: 5px;
+}
+.item img {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
 /** Larger Screens - desktops and tablets **/
 @media all and (min-device-width: 1200px) {
+    main {
+        margin: 0 auto;
+    }
     .app-bar {
         position: relative;
     }
@@ -327,13 +340,4 @@ main {
         flex: 1;
         text-align: center;
     }
-}
-
-.item {
-    margin-bottom: 5px;
-}
-.item img {
-    float: left;
-    margin-right: 5px;
-    margin-bottom: 5px;
 }
