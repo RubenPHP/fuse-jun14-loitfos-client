@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 (function(){
 
-	var line = React.createClass({
+	var d3line = React.createClass({
 		render: function(){
 			return (
 				<div>
@@ -17,7 +17,6 @@
 			var that = this;
 
 			$.get(this.props.source, function(result) {
-
 				if (props.callback) {
 					result = props.callback && props.callback(result);
 				}
@@ -48,7 +47,7 @@
 				  /* Done setting the chart up? Time to render it!*/
 				  var myData =data;   //You need data...
 
-				  d3.select(this.getDomNode().getElementsByTagName('svg')[0])    //Select the <svg> element you want to render the chart in.   
+				  d3.select(that.getDOMNode().getElementsByTagName('svg')[0])    //Select the <svg> element you want to render the chart in.   
 				      .datum(myData)         //Populate the <svg> element with chart data...
 				      .call(chart);          //Finally, render the chart!
 
@@ -64,14 +63,26 @@
 		console.log(data);
 		var series = data.map(function(t){
 			var d = new Date(t.date);
-			return { x: t.getHours(), y: t.getMonth() }
+			return { x: d.getHours() , y: t.retweets }
 		});
 
-		return series;
+		series.sort(function(a, b){
+			return a.x - b.x;
+		})
+		console.log(series);
+		return [
+		    {
+		      values: series,      //values - represents the array of {x,y} data points
+		      key: 'Tweets per hours', //key  - the name of the series.
+		      color: '#ff7f0e',  //color - optional: choose your own line color.
+		      area: false
+		    }
+		  ];
 	}
+
 	// Regular pie chart example
 	React.renderComponent(
-		<line source={ApiCalls.GENDER} 
+		<d3line source={ApiCalls.GENDER} 
 			callback={digest} 
 			label="tweets by time"
 			targetId="line-chart"/>,
