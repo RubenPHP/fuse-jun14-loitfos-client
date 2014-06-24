@@ -172,3 +172,5 @@ node_modules
 # .idea
 .idea
 .idea/*
+.idea/workspace.xml
+**/.idea/*
