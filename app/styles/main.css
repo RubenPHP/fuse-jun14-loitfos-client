@@ -213,6 +213,10 @@ main {
     min-height: 100%;
 }
 
+.logo .brand {
+    margin-top: 16px;
+    position: relative;
+}
 .item {
     margin-bottom: 5px;
 }
