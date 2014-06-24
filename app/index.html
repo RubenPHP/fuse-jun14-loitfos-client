@@ -15,6 +15,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
 
+        <link rel="stylesheet" type="text/css" href="https://raw.github.com/novus/nvd3/master/src/nv.d3.css">
         <!-- Tile icon for Win8 (144x144 + tile color) -->
         <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
         <meta name="msapplication-TileColor" content="#3372DF">
@@ -99,6 +100,16 @@
                     
                 </div>
 
+            </section> 
+
+            <section class="g-medium-full g-wide--full">
+                <div class="g--half" id="replies-chart">
+                    
+                </div>
+                <div class="g--half g--last" id="retweets-chart">
+                    
+                </div>
+
             </section>
 
             <div class="g-medium-full g-wide--full" id="latest-pics">
@@ -106,7 +117,11 @@
             </div>
 
         </main>
-
+        <script>
+            var ApiCalls = {
+                GENDER: 'mock/gender.json'
+            };
+        </script>
         <!-- build:js scripts/main.min.js -->
         <script src="scripts/main.js"></script>
 
@@ -114,9 +129,11 @@
         <script src="bower_components/react/JSXTransformer.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/d3/d3.min.js"></script>
+        <script src="scripts/lib/nvd3.js" type="text/javascript"></script>
     
         <script src="scripts/list.js" type="text/jsx"></script>
-    	<script src="scripts/images-list.js" type="text/jsx"></script>
+        <script src="scripts/images-list.js" type="text/jsx"></script>
+    	<script src="scripts/pie-extra.js" type="text/jsx"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

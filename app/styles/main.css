@@ -214,7 +214,7 @@ main {
 }
 
 .logo .brand {
-    margin-top: 16px;
+    top: 10px;
     position: relative;
 }
 .item {
