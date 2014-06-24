@@ -14,13 +14,14 @@
 		componentDidMount: function () {
 			var props = this.props;
 			var target = props.targetId;
+			var that = this;
 			$.get(this.props.source, function(result) {
 				if (props.callback) {
 					result = props.callback && props.callback(result);
 				}
 		      	renderPie(result);
 		    });
-
+			debugger;
 			var renderPie = function(data){	
 				var x = props.x || 'label';
 				var y = props.y || 'value';
@@ -30,7 +31,7 @@
 				      .y(function(d) { return d[y] })
 				      .showLabels(true);
 
-				    d3.select("#" + target + " svg")
+				    d3.select(that.getDOMNode().getElementsByTagName('svg')[0])
 				        .datum(data)
 				        .transition().duration(350)
 				        .call(chart);
