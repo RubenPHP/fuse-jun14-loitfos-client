@@ -42,4 +42,24 @@
             closeMenu();
         }
     });
+
+    window.tweets = [
+        {
+            image: 'some-image',
+            name: 'oren',
+            total: '300'
+        },
+
+        {
+            image: 'some-image',
+            name: 'jerry',
+            total: '500'
+        },
+
+        {
+            image: 'some-image',
+            name: 'billy',
+            total: '700'
+        },
+    ]
 })();
