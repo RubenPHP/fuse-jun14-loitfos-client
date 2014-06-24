@@ -1,0 +1,15 @@
+{
+  "name": "lowitfuss",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "d3": "latest",
+    "react": "latest"
+    
+  },
+  "devDependencies": {
+    "jquery": "latest",
+    "d3": "latest",
+    "react": "latest"
+  }
+}
