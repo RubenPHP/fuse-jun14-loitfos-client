@@ -169,3 +169,6 @@ pip-log.txt
 
 node_modules
 .tmp/
+# .idea
+.idea
+.idea/*
