@@ -21,7 +21,6 @@
 				}
 		      	renderPie(result);
 		    });
-			debugger;
 			var renderPie = function(data){	
 				var x = props.x || 'label';
 				var y = props.y || 'value';
