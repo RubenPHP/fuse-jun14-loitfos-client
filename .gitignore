@@ -169,3 +169,8 @@ pip-log.txt
 
 node_modules
 .tmp/
+# .idea
+.idea
+.idea/*
+.idea/workspace.xml
+**/.idea/*
